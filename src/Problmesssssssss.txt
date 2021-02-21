@@ -1,0 +1,29 @@
+ awal erreur hia heki 
+ //fama extension lezzzm tzidhaa https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc/related?hl=en-US
+
+
+
+ lezzm tzid faza te3 urlimage https://image.tmdb.org/t/p/original
+
+
+
+
+
+
+
+ const handleClick = (movie) => {
+    if(trailerUrl)
+    {
+        setTrailerUrl("");
+    }
+
+    else
+    {
+        movieTrailer(movie?.name || "")
+        .then((url) => {
+const urlParams=  new  URLSearchParams(new URL(url).search);
+                setTrailerUrl(urlParams.get("v"));
+            })
+            .catch((error) => console.log(error));
+    }
+};
