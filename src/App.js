@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { login, logout } from "./features/userSlice";
 
 function App() {
-  const user = null;
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
   useEffect(() => {
