@@ -5,6 +5,7 @@ import { auth } from "../firebase";
 import { login, logout, selectUser } from "../features/userSlice";
 import "./ProfileScreen.css";
 import Nav from "../Nav";
+import FooterPage from "../FooterPage";
 export function Profilescreen(props) {
   const user = useSelector(selectUser);
   return (

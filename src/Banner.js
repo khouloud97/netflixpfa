@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "./axios";
 import requests from "./requests";
 import "./Banner.css";
+import "./Row";
 
 export function Banner() {
   const [movie, setMovie] = useState([]);
@@ -21,9 +22,10 @@ export function Banner() {
 
   console.log(movie);
 
-  function truncate(string, n) {
-    return string > n ? string.substring(0, n - 1) + "..." : string;
+  function truncate(str, n) {
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
+
   return (
     <header
       className="banner"
@@ -32,7 +34,7 @@ export function Banner() {
         backgroundImage: `url(
                        "https://image.tmdb.org/t/p/original/${movie?.backdrop_path}"
                     )`,
-        backgroundPosition: "center center",
+        backgroundPosition: "",
       }}
     >
       <div className="banner_contents">
@@ -43,8 +45,7 @@ export function Banner() {
         </h1>
 
         <div className="banner_buttons">
-          <button className="banner_button">Play </button>
-          <button className="banner_button"> My List</button>
+          <button className="banner_button"> {movie.name} </button>
         </div>
         {/* div 2 butt */}
 

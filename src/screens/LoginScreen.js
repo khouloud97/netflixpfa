@@ -12,7 +12,7 @@ export function Loginscreen() {
         </button>
         <img
           className="loginScreen_logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png"
+          src="https://scontent.ftun6-1.fna.fbcdn.net/v/t1.15752-9/157181232_260601775599893_4404483419325055995_n.png?_nc_cat=102&ccb=1-3&_nc_sid=ae9488&_nc_ohc=GkaDz4PZvOEAX8DA1bl&_nc_ht=scontent.ftun6-1.fna&oh=4602938bbe85881c868b1aabe191d0a4&oe=60756D24"
           alt=""
         />
 

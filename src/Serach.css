@@ -1,0 +1,11 @@
+.loginScreen {
+  background: url("https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg");
+}
+.tt {
+  font-size: 3.125rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
+  color: aliceblue;
+  nav-down: auto;
+}

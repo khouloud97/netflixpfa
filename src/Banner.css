@@ -6,8 +6,8 @@
 
 .banner_contents {
   margin-left: 30px;
-  padding-top: 140px;
-  height: 190px;
+  padding-top: 150px;
+  height: 197px;
 }
 
 .banner_title {
@@ -22,6 +22,7 @@
   font-size: 0.8rem;
   max-width: 360px;
   height: 80px;
+  animation: 3s infinite alternate slidein;
 }
 
 .banner_button {
@@ -40,7 +41,7 @@
 }
 .banner_button:hover {
   color: black;
-  background-color: blanchedalmond;
+  background-color: rgba(255, 235, 205, 0);
   transition: all 0.2;
 }
 .banner--fadeBottom {
