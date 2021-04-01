@@ -1,10 +1,12 @@
 import React, { useRef } from "react";
+import { useHistory } from "react-router";
 import { auth } from "../firebase";
 import "./SignupScreen.css";
 
 function SignupScreen() {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
+  const history = useHistory();
 
   const register = (e) => {
     e.preventDefault();
@@ -33,7 +35,15 @@ function SignupScreen() {
       })
       .catch((error) => alert(error.message));
   };
-
+  const forgotpas = (e) => {
+    e.preventDefault();
+    auth
+      .sendPasswordResetEmail(emailRef.current.value)
+      .then((authUser) => {
+        console.log(authUser);
+      })
+      .catch((error) => alert(error.message));
+  };
   return (
     <div className="signupScreen">
       <form>
@@ -51,8 +61,17 @@ function SignupScreen() {
             {" "}
             Sign up Now ?
           </span>
+          <br />
         </h4>
       </form>
+      <div>
+        <div> Forgot your password</div>
+        <div className="signupScreen_link" onClick={forgotpas}>
+          {" "}
+          <input ref={emailRef} type="email" placeholder="Email" />
+          <button disabled={!emailRef}> Submit </button>
+        </div>
+      </div>
     </div>
   );
 }

@@ -42,15 +42,35 @@
   margin-top: 5%;
   width: 100%;
   color: white;
-  background-color: tomato;
+  background-color: #ff6347;
   font-weight: 600;
   border: none;
   cursor: pointer;
 }
-.profilescreen_plans {
-  margin: 20px;
-}
+
 .profilescreen_plans > h3 {
   border-bottom: 1px solid #282c2d;
   padding-bottom: 10%px;
+}
+
+.profilescreen_plans {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 20px;
+  margin-top: 5%;
+  width: 100%;
+  color: white;
+  font-weight: 600;
+  border: none;
+}
+.profilescreen_plans >button
+ {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 20px;
+  margin-top: 5%;
+  width: 100%;
+  color: white;
+  font-weight: 600;
+  border: none;
 }

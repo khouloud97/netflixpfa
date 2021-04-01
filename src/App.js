@@ -1,13 +1,19 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import { Homescreen } from "./screens/HomeScreen";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import { Loginscreen } from "./screens/LoginScreen";
 import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 import Profilescreen from "./screens/ProfileScreen";
 import Serach from "./Serach ";
+import Searchmovies from "./SearchMovies";
 
 export function App() {
   const user = useSelector(selectUser);
@@ -40,14 +46,15 @@ export function App() {
           <Loginscreen />
         ) : (
           <Switch>
-            <Route exact path="/profile">
-              <Profilescreen />
-            </Route>
             <Router exact path="/">
               <Homescreen />
             </Router>
 
-            <Route exact path="/search">
+            <Route path="/profile" component={Profilescreen}>
+              <Profilescreen />
+            </Route>
+
+            <Route path="/search" component={Searchmovies}>
               <Serach />
             </Route>
           </Switch>

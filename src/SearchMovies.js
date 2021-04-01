@@ -48,7 +48,9 @@ export function Searchmovies(props) {
               <div className="card--content">
                 <h3 className="card--title">{movie.title}</h3>
                 <p>
-                  <small className="smalln">RELEASE DATE: {movie.release_date}</small>
+                  <small className="smalln">
+                    RELEASE DATE: {movie.release_date}
+                  </small>
                 </p>
                 <p>
                   <small className="smalln">RATING: {movie.vote_average}</small>

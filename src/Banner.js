@@ -45,7 +45,10 @@ export function Banner() {
         </h1>
 
         <div className="banner_buttons">
-          <button className="banner_button"> {movie.name} </button>
+          <button className="banner_button">
+            {" "}
+            Vote average : {movie.vote_average}{" "}
+          </button>
         </div>
         {/* div 2 butt */}
 

@@ -5,14 +5,14 @@ import { auth } from "../firebase";
 import { login, logout, selectUser } from "../features/userSlice";
 import "./ProfileScreen.css";
 import Nav from "../Nav";
-import FooterPage from "../FooterPage";
+import PlansScreens, { Plansscreens } from "./PlansScreens";
 export function Profilescreen(props) {
   const user = useSelector(selectUser);
   return (
     <div className="profileScreen">
       <Nav />
       <div className="profileScreen_body">
-        <h1>Edit Profile</h1>
+        <h1>Edit Profile </h1>
         <div className="profileScreen_info">
           <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/1bdc9a33850498.56ba69ac2ba5b.png"></img>
 
@@ -21,7 +21,55 @@ export function Profilescreen(props) {
             <div className="profilescreen_plans">
               <h3>
                 Plans
-                <p></p>
+                <br />
+                <center>
+                  <table cellspacing="45px">
+                    <tr>
+                      {" "}
+                      <th> Basic Plan 720p </th>{" "}
+                      <th>
+                        {" "}
+                        <button className="profileScreen-logout">
+                          {" "}
+                          Subscribe
+                        </button>
+                      </th>
+                    </tr>
+                    <tr>
+                      {" "}
+                      <th> standard Plan 1080p </th>{" "}
+                      <th>
+                        {" "}
+                        <button className="profileScreen-logout">
+                          {" "}
+                          Subscribe
+                        </button>
+                      </th>
+                    </tr>
+                    <tr>
+                      {" "}
+                      <th> Premium 4K + hdr</th>{" "}
+                      <th>
+                        {" "}
+                        <button className="profileScreen-logout">
+                          {" "}
+                          Subscribe
+                        </button>
+                      </th>
+                    </tr>
+                    <tr>
+                      {" "}
+                      <th> Standard</th>{" "}
+                      <th>
+                        {" "}
+                        <button className="profileScreen-logout">
+                          {" "}
+                          Subscribe
+                        </button>
+                      </th>
+                    </tr>
+                  </table>
+                </center>
               </h3>
               <button
                 onClick={() => auth.signOut()}
