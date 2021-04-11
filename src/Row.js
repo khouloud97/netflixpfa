@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import YouTube from "react-youtube";
 import axios from "./axios";
-import movieTrailer from "movie-trailer";
+import AddFavourites from "./AddFavourites";
 import "./Row.css";
 const base_url = "https://image.tmdb.org/t/p/original/";
 
@@ -52,12 +52,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
               }`}
               alt={movie.name}
             />
-          ))}
-          {movies.map((movie) => (
-            <span
-              className={`row_poster ${isLargeRow && "row_posterLarge"}`}
-              key={movie.id}
-            ></span>
           ))}
         </div>
 

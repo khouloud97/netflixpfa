@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Homescreen } from "./screens/HomeScreen";
 import "./SearchMovies.css";
-export function Searchmovies(props) {
+export function Searchmovies() {
   //states- input query, movies
   const [query, setQuery] = useState("");
   //create the state for movies, and update that state appropriate

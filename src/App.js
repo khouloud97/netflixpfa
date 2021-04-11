@@ -7,13 +7,14 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+import AddFavourites from "./AddFavourites";
 import { Loginscreen } from "./screens/LoginScreen";
 import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 import Profilescreen from "./screens/ProfileScreen";
-import Serach from "./Serach ";
-import Searchmovies from "./SearchMovies";
+import Serach from "./Serach";
+import Mpoubliée from "./screens/Mpoubliée";
 
 export function App() {
   const user = useSelector(selectUser);
@@ -50,11 +51,14 @@ export function App() {
               <Homescreen />
             </Router>
 
-            <Route path="/profile" component={Profilescreen}>
+            <Route path="/profile">
               <Profilescreen />
             </Route>
 
-            <Route path="/search" component={Searchmovies}>
+            <Route path="/Mpoubliée">
+              <Mpoubliée />
+            </Route>
+            <Route path="/search">
               <Serach />
             </Route>
           </Switch>

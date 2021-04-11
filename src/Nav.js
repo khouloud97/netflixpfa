@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./Nav.css";
-import Searchmovies from "./SearchMovies";
+import Profilescreen from "./screens/ProfileScreen";
+
 export function Nav() {
   const [show, handleShow] = useState(false);
   const history = useHistory();
@@ -12,9 +13,9 @@ export function Nav() {
       } else handleShow(false);
     });
 
-    return () => {
-      window.removeAllListeners("scroll");
-    };
+    //   return () => {
+    // window.removeAllListeners("scroll");
+    //  };
   }, []);
 
   return (

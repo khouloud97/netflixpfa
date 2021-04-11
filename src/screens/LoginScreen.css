@@ -52,7 +52,8 @@
   left: 0;
 }
 .loginScreen_body > h1 {
-  font-size: 3.125rem;
+  font-size: 60px; /* Titres de 40 pixels */
+  font-family: Arial Black;
   font-weight: 400;
   margin-bottom: 20px;
   text-align: center;
@@ -89,4 +90,31 @@
   border: none;
   font-weight: 600;
   cursor: pointer;
+}
+.our-story-card {
+  position: relative;
+  border-bottom: 8px solid #222;
+  padding: 50px 5%;
+  margin-bottom: 0;
+  background: black;
+  color: #fff;
+}
+.animation-card {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.our-story-card-img,
+.animation-card .our-story-card-animation-container {
+  position: relative;
+  overflow: hidden;
+}
+.animation-card.watchOnTv .our-story-card-animation {
+  position: relative;
+  overflow: hidden;
 }

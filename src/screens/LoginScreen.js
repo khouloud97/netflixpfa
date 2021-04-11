@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
+import FooterPage from "../FooterPage";
 import "./LoginScreen.css";
+import Mpoubliée from "./Mpoubliée";
 import SignupScreen from "./SignupScreen";
 
 export function Loginscreen() {
   const [signIn, setSigIn] = useState(false);
+  const history = useHistory;
+
   return (
     <div className="loginScreen">
       <div className="loginScreen_background">
@@ -23,7 +28,9 @@ export function Loginscreen() {
           <SignupScreen />
         ) : (
           <>
-            <h1>Films, séries TV et bien plus en illimité.</h1>
+            <h1>
+              Films, séries TV et bien <br /> plus en illimité.
+            </h1>
             <h2>Où que vous soyez. Annulez à tout moment.</h2>
             <h3>
               Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour vous
@@ -41,6 +48,33 @@ export function Loginscreen() {
                   Get Started
                 </button>
               </form>
+            </div>
+            <div class="our-story-card-text">
+              <h1>Regardez Netflix sur votr TV.</h1>
+              <div class="our-story-card-img-container">
+                <video width="600" height="450" autoPlay>
+                  <source
+                    src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div>
+                <h1>
+                  Téléchargez vos séries préférées pour les regarder hors
+                  connexion.
+                </h1>
+                <h3>
+                  Enregistrez vos programmes préférés et ayez toujours quelque
+                  chose à regarder.
+                </h3>
+                <img
+                  width="600"
+                  height="450"
+                  alt=""
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+                />
+              </div>
             </div>
           </>
         )}
