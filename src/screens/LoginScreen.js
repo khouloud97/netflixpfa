@@ -21,7 +21,7 @@ export function Loginscreen() {
           alt=""
         />
 
-        <div className="loginSreen_gradien"></div>
+        <div className="loginSreen_gradien"> </div>
       </div>
       <div className="loginScreen_body ">
         {signIn ? (

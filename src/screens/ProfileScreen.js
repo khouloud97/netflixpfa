@@ -7,7 +7,7 @@ import "./ProfileScreen.css";
 import StripeCheckout from "react-stripe-checkout";
 
 import Nav from "../Nav";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import PlansScreens, { Plansscreens } from "./PlansScreens";
 import axios from "axios";
@@ -109,12 +109,14 @@ export function Profilescreen() {
                   </table>
                 </center>
               </h3>
-              <button
-                onClick={() => auth.signOut()}
-                className="profileScreen-logout"
-              >
-                Sign OUt
-              </button>
+              <Link to="/">
+                <button
+                  onClick={() => auth.signOut()}
+                  className="profileScreen-logout"
+                >
+                  Sign OUt
+                </button>
+              </Link>
             </div>
           </div>
         </div>

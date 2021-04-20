@@ -1,12 +1,7 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import { Homescreen } from "./screens/HomeScreen";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AddFavourites from "./AddFavourites";
 import { Loginscreen } from "./screens/LoginScreen";
 import { auth } from "./firebase";
@@ -14,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 import Profilescreen from "./screens/ProfileScreen";
 import Serach from "./Serach";
-import Mpoubliée from "./screens/Mpoubliée";
+import Forgotpassword from "./screens/Forgotpassword";
 
 export function App() {
   const user = useSelector(selectUser);
@@ -44,21 +39,25 @@ export function App() {
     <div className="app">
       <Router>
         {!user ? (
-          <Loginscreen />
+          <Switch>
+            <Route exact path="/">
+              <Loginscreen />
+            </Route>
+            <Route path="/Forgotpassword">
+              <Forgotpassword />
+            </Route>
+          </Switch>
         ) : (
           <Switch>
-            <Router exact path="/">
+            <Route exact path="/">
               <Homescreen />
-            </Router>
+            </Route>
 
-            <Route path="/profile">
+            <Route path="/Profilescreen">
               <Profilescreen />
             </Route>
 
-            <Route path="/Mpoubliée">
-              <Mpoubliée />
-            </Route>
-            <Route path="/search">
+            <Route path="/Serach">
               <Serach />
             </Route>
           </Switch>

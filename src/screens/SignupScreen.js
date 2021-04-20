@@ -1,7 +1,10 @@
 import React, { useRef } from "react";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import { auth } from "../firebase";
 import "./SignupScreen.css";
+import Forgotpassword from "./Forgotpassword";
+import { Nav } from "react-bootstrap";
 
 function SignupScreen() {
   const emailRef = useRef(null);
@@ -53,6 +56,11 @@ function SignupScreen() {
               Sign up Now ?
             </span>
             <br />
+            <span className="signupScreen_gray"> Forgot your password ?</span>
+            <Link to="/Forgotpassword">
+              <span className="signupScreen_link">resend password</span>
+              <br />
+            </Link>{" "}
           </h4>
         </form>
         <div></div>
