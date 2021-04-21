@@ -25,13 +25,14 @@ export function Plansscreens() {
       });
   }, []);
   return (
-    <div className="planScreens">
+    <div 
+    className="planScreens">
       {Object.entries(products).map(([productID, productData]) => {
         return (
           <div className="planScreens_info">
             <h5> Premum </h5>
             <h5>{productData.description}</h5>
-          </div>
+          </div> 
         );
       })}
     </div>

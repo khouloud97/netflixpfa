@@ -2,8 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import YouTube from "react-youtube";
 import axios from "./axios";
-import AddFavourites from "./AddFavourites";
-import "./Row.css";
+ import "./Row.css";
 const base_url = "https://image.tmdb.org/t/p/original/";
 
 function Row({ title, fetchUrl, isLargeRow }) {
@@ -16,7 +15,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
       setMovies(request.data.results);
       return request;
     }
-    fetchData();
+    fetchData(); 
   }, [fetchUrl]);
   const opts = {
     height: "400",

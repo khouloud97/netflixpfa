@@ -95,9 +95,11 @@ export function Profilescreen() {
                     <tr>
                       {" "}
                       <th> Premium 4K + hdr</th>{" "}
-                      <th>
+                      <th
+                      >
                         {" "}
                         <StripeCheckout
+                        
                           stripeKey="pk_test_51IXYi2B0HOjvAJqsP4WCDpoNPB8XNZnLO1QphB2Cv6Z6J78StZ2DiLBNIyqgUJq9h6PH9GJfzpag63NuuwOu0wu000r4Hjealo"
                           token={handleToken}
                           amount={product3.price * 100}

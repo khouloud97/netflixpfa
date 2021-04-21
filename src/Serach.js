@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "./Nav";
 import Searchmovies from "./SearchMovies";
-import "./Serach.css";
+ import "./Serach.css";
 function Serach() {
   return (
     <div className="loginScreen ">

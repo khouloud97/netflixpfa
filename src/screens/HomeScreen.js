@@ -1,13 +1,12 @@
-import React from "react";
-import "./HomeScreen.css";
-import Nav from "../Nav";
-import Row from "../Row";
-import requests from "../requests";
-import Banner from "../Banner";
-import Footer from "../FooterPage";
-import FooterPage from "../FooterPage";
-import Searchmovies from "../SearchMovies";
-import AddFavourites from "../AddFavourites";
+import React from "react"
+import "./HomeScreen.css"
+import Nav from "../Nav"
+import Row from "../Row"
+import requests from "../requests"
+import Banner from "../Banner"
+import Footer from "../FooterPage"
+import FooterPage from "../FooterPage"
+import Searchmovies from "../SearchMovies"
 
 export function Homescreen() {
   return (
@@ -23,15 +22,11 @@ export function Homescreen() {
         isLargeRow={true}
       />
       <Row title="Action Movies" fetchUrl={requests.fetchActionMovies}></Row>
-      <Row
-        title="Comedy Movies"
-        fetchUrl={requests.fetchComedyMovies}
-        favouriteComponent={AddFavourites}
-      ></Row>
+      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}></Row>
       <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies}></Row>
       <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies}></Row>
       <Row title="Doucumentairees" fetchUrl={requests.fetchDocumentaries}></Row>
       <FooterPage />
     </div>
-  );
+  )
 }
