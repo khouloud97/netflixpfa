@@ -1,47 +1,50 @@
+/** @format */
+
 .nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 40px;
-  display: flex;
-  height: 40px;
-  z-index: 1;
-  transition-timing-function: ease-in;
-  transition: all 0.6s;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 40px;
+	display: flex;
+	height: 40px;
+	z-index: 1;
+	transition-timing-function: ease-in;
+	transition: all 0.6s;
 }
 .nav_black {
-  background-color: black;
- }
+	background-color: black;
+}
 .nav_logo {
-  width: 100px;
-  object-fit: contain;
-  position: fixed;
-  left: 20px;
-  cursor: pointer;
-  margin-right: 50px;
-  top: 1px;
+	width: 100px;
+	object-fit: contain;
+	position: fixed;
+	left: 20px;
+	cursor: pointer;
+	margin-right: 50px;
+	top: 1px;
 }
 .nav_avatar {
-  width: 30px;
-  position: fixed;
-  cursor: pointer;
-  right: 20px;
-  object-fit: contain;
+	width: 30px;
+	position: fixed;
+	cursor: pointer;
+	right: 30px;
+	top: 2%;
+	object-fit: contain;
 }
-.btn{
- position: relative;
- left: 100px;
-  background: none;
-  color: white;
-   padding: 5px 10px;
-   border: none;
-  outline: none;
-  font-size: 14px;
-  font-weight: 500;
-  margin: 0px 10px;
-  cursor: pointer;
+.btn {
+	position: relative;
+	left: 100px;
+	background: none;
+	color: white;
+	padding: 5px 10px;
+	border: none;
+	outline: none;
+	font-size: 14px;
+	font-weight: 500;
+	margin: 0px 10px;
+	cursor: pointer;
 }
-.btn :hover{
-  color: white;
-  cursor: unset;
+.btn :hover {
+	color: white;
+	cursor: unset;
 }
